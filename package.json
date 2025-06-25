@@ -18,6 +18,7 @@
   "homepage": "https://github.com/frankles12/BrewedBoard#readme",
   "description": "",
   "dependencies": {
+    "@tabler/icons-react": "^3.34.0",
     "@tailwindcss/cli": "^4.1.10",
     "@tailwindcss/postcss": "^4.1.10",
     "class-variance-authority": "^0.7.1",
@@ -28,6 +29,7 @@
     "tailwindcss": "^4.1.10"
   },
   "devDependencies": {
+    "@types/react": "^19.1.8",
     "tw-animate-css": "^1.3.4"
   }
 }
