@@ -1,0 +1,197 @@
+{
+  "designSystem": {
+    "name": "BrewSip Craft Beer Marketplace",
+    "version": "1.0.0",
+    "description": "A design system based on the BrewSip Dribbble shot, featuring a modern, dark-mode aesthetic for a craft beer marketplace.",
+    "source": "https://dribbble.com/shots/21846478-BrewSip-Craft-Beer-Marketplace",
+    "styleProfile": {
+      "aesthetic": "Modern, Minimalist, Dark Mode",
+      "mood": "Premium, Energetic, Clean, Bold",
+      "principles": [
+        "High contrast for readability and visual impact.",
+        "Generous use of negative space to reduce clutter.",
+        "Clear visual hierarchy to guide user attention.",
+        "Focus on high-quality product imagery.",
+        "Consistent use of rounded corners for a soft, modern feel."
+      ]
+    },
+    "colors": {
+      "primary": {
+        "accent": {
+          "value": "#FFB800",
+          "description": "A vibrant amber/yellow used for primary calls-to-action, highlights, and key interactive elements."
+        }
+      },
+      "neutral": {
+        "background": {
+          "value": "#1A1A1A",
+          "description": "The main dark background color for the application."
+        },
+        "cardBackground": {
+          "value": "#2C2C2C",
+          "description": "Slightly lighter background for cards and elevated surfaces."
+        },
+        "textPrimary": {
+          "value": "#FFFFFF",
+          "description": "Primary text color used on dark backgrounds."
+        },
+        "textSecondary": {
+          "value": "#B3B3B3",
+          "description": "Secondary, less prominent text color for subtitles, metadata, and placeholder text."
+        },
+        "border": {
+          "value": "#4D4D4D",
+          "description": "Subtle border color for inputs and secondary buttons."
+        }
+      }
+    },
+    "typography": {
+      "fontFamily": {
+        "primary": "'General Sans', 'Inter', sans-serif",
+        "description": "A modern, geometric sans-serif font for all text."
+      },
+      "styles": {
+        "heading1": {
+          "fontSize": "48px",
+          "fontWeight": "700",
+          "lineHeight": "1.2",
+          "description": "For main page titles and hero section headings."
+        },
+        "heading2": {
+          "fontSize": "32px",
+          "fontWeight": "600",
+          "lineHeight": "1.3",
+          "description": "For section titles."
+        },
+        "body": {
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "1.6",
+          "description": "For general body text, descriptions, and paragraphs."
+        },
+        "button": {
+          "fontSize": "14px",
+          "fontWeight": "600",
+          "textTransform": "uppercase",
+          "letterSpacing": "0.5px",
+          "description": "For text within buttons."
+        },
+        "caption": {
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "color": "var(--color-neutral-textSecondary)",
+          "description": "For smaller text, labels, and metadata like prices or categories."
+        }
+      }
+    },
+    "layout": {
+      "container": {
+        "maxWidth": "1200px",
+        "padding": "0 24px",
+        "description": "Main content is centered within a max-width container."
+      },
+      "spacing": {
+        "unit": "8px",
+        "description": "Base spacing unit. All margins and paddings should be a multiple of this.",
+        "scale": {
+          "xs": "4px",
+          "sm": "8px",
+          "md": "16px",
+          "lg": "24px",
+          "xl": "32px",
+          "xxl": "48px"
+        }
+      },
+      "grid": {
+        "columns": "12",
+        "gap": "24px",
+        "description": "A 12-column grid is recommended for structuring content, especially for card layouts which can span 3, 4, or 6 columns."
+      }
+    },
+    "components": {
+      "button": {
+        "description": "Buttons are used for primary user actions.",
+        "baseStyle": {
+          "padding": "12px 24px",
+          "borderRadius": "30px",
+          "border": "1px solid transparent",
+          "cursor": "pointer",
+          "transition": "background-color 0.3s ease, transform 0.2s ease"
+        },
+        "variants": {
+          "primary": {
+            "backgroundColor": "var(--color-primary-accent)",
+            "color": "var(--color-neutral-background)",
+            "description": "For the most important actions."
+          },
+          "secondary": {
+            "backgroundColor": "transparent",
+            "color": "var(--color-neutral-textPrimary)",
+            "borderColor": "var(--color-neutral-border)",
+            "description": "For secondary actions."
+          }
+        },
+        "states": {
+          "hover": {
+            "transform": "scale(1.05)",
+            "brightness": "1.1",
+            "description": "Buttons should provide visual feedback on hover, like a slight scale or brightness increase."
+          }
+        }
+      },
+      "card": {
+        "description": "Cards are used to display product information in a digestible format.",
+        "baseStyle": {
+          "backgroundColor": "var(--color-neutral-cardBackground)",
+          "borderRadius": "16px",
+          "padding": "16px",
+          "display": "flex",
+          "flexDirection": "column",
+          "gap": "12px",
+          "transition": "transform 0.3s ease, box-shadow 0.3s ease"
+        },
+        "children": [
+          "ImageContainer",
+          "Title (Typography: Heading2/Body)",
+          "Subtitle/Category (Typography: Caption)",
+          "Price/CTA (Typography: Caption/Button)"
+        ],
+        "states": {
+          "hover": {
+            "transform": "translateY(-8px)",
+            "boxShadow": "0px 10px 20px rgba(0, 0, 0, 0.2)",
+            "description": "Cards should elevate on hover to indicate interactivity."
+          }
+        }
+      },
+      "inputField": {
+        "description": "For user text input, like search bars.",
+        "baseStyle": {
+          "backgroundColor": "var(--color-neutral-cardBackground)",
+          "color": "var(--color-neutral-textPrimary)",
+          "borderRadius": "30px",
+          "padding": "12px 20px",
+          "border": "1px solid var(--color-neutral-border)"
+        },
+        "placeholder": {
+          "color": "var(--color-neutral-textSecondary)"
+        }
+      },
+      "navigation": {
+        "description": "The main site navigation bar.",
+        "baseStyle": {
+          "padding": "16px 0",
+          "display": "flex",
+          "justifyContent": "space-between",
+          "alignItems": "center"
+        },
+        "elements": [
+          "Logo",
+          "NavigationLinks",
+          "SearchField",
+          "UserActions (e.g., Cart, Profile)"
+        ]
+      }
+    }
+  }
+} 
