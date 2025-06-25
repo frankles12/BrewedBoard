@@ -3,7 +3,7 @@
 - [ ] 1.0 Setup Next.js Project and Core Dependencies
   - [ ] 1.1 Initialize a new Next.js application.
   - [ ] 1.2 Install and configure Tailwind CSS according to the design system.
-  - [ ] 1.3 Select and integrate a font from Google Fonts.
+  - [x] 1.3 Select and integrate a font from Google Fonts.
   - [ ] 1.4 Set up the basic project structure (folders for components, pages, services).
   - [ ] 1.5 Install and configure Aceternity UI components.
 - [ ] 2.0 Implement Barcode Scanning Feature
